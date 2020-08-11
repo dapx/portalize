@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cp ~/.$(basename $SHELL)rc ~/.$(basename $SHELL)rc.bkp.$(date +%y%m%d%H%M%S)
 
 portalize_function_alias="alias portalize='make_portal(){ echo alias \$1=\$PWD >> ~/.$(basename $SHELL)rc; unset -f make_portal; source ~/.$(basename $SHELL)rc }; make_portal'"
