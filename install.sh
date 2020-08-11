@@ -1,10 +1,11 @@
 #!/bin/bash
-cp ~/.$(basename $SHELL)rc ~/.$(basename $SHELL)rc.bkp.$(date +%y%m%d%H%M%S)
+rcFile=".$(basename $SHELL)rc"
+cp ~/$rcFile ~/$rcFile.bkp.$(date +%y%m%d%H%M%S)
 
-portalize_function_alias="alias portalize='make_portal(){ echo alias \$1=\$PWD >> ~/.$(basename $SHELL)rc; unset -f make_portal; source ~/.$(basename $SHELL)rc }; make_portal'"
-unportalize_function_alias="alias unportalize='destroy_portal(){ printf \"%s\\n\" \"g/alias \$1=/d\" w | ed -s ~/.$(basename $SHELL)rc; unalias \$1; unset -f destroy_portal; source ~/.$(basename $SHELL)rc }; destroy_portal'"
+portalize_function_alias="alias portalize='make_portal() { echo alias \$1=\$PWD >> ~/$rcFile; unset -f make_portal; source ~/$rcFile }; make_portal'"
+unportalize_function_alias="alias unportalize='destroy_portal() { printf \"%s\\n\" \"g/alias \$1=/d\" w | ed -s ~/$rcFile; unalias \$1; unset -f destroy_portal; source ~/$rcFile }; destroy_portal'"
 
-echo $portalize_function_alias >> ~/.$(basename $SHELL)rc
-echo $unportalize_function_alias >> ~/.$(basename $SHELL)rc
+echo $portalize_function_alias >> ~/$rcFile
+echo $unportalize_function_alias >> ~/$rcFile
 
-unset portalize_function_alias unportalize_function_alias
+unset portalize_function_alias unportalize_function_alias rcFile
