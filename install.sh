@@ -7,4 +7,4 @@ unportalize_function_alias="alias unportalize='destroy_portal(){ printf \"%s\\n\
 echo $portalize_function_alias >> ~/.$(basename $SHELL)rc
 echo $unportalize_function_alias >> ~/.$(basename $SHELL)rc
 
-unset -f portalize_function_alias unportalize_function_alias
+unset portalize_function_alias unportalize_function_alias
