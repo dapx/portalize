@@ -17,10 +17,7 @@ We make it easy to you with portalize.
 Execute on your shell:
 
 ```sh
-git clone git@github.com:dapx/portalize.git
-cd portalize
-chmod +x install.sh
-./install.sh
+curl https://raw.githubusercontent.com/dapx/portalize/master/install.sh | bash
 source ~/.$(basename $SHELL)rc
 ```
 
