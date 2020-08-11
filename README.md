@@ -4,7 +4,7 @@ A simple alias to make portals 🧙
 
 ## How it works?
 
-It's a very simple alias that allow your to create alias for you current directory.
+It's a very simple alias that allow you to create alias for your current directory.
 
 Several times we need to go from a different directory path to another as well as when you change the project that you are working, or needs to go working on a very deep directory path.
 
