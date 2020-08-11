@@ -1,6 +1,8 @@
 # portalize
 
-A simple alias to make portals 🧙
+A simple shell alias to make portals 🧙
+
+![Runescape tablet teleport animation](https://oldschool.runescape.wiki/images/1/1a/Teleport_Tablet.gif)
 
 ## How it works?
 
@@ -19,6 +21,7 @@ git clone git@github.com:dapx/portalize.git
 cd portalize
 chmod +x install.sh
 ./install.sh
+source ~/.$(basename $SHELL)rc
 ```
 
 ## How to create portals?
