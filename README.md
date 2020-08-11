@@ -37,3 +37,20 @@ aliasname
 ```
 
 And you will be teleported to there.
+
+## How to remove portals
+
+Call the unportalize alias from any place passing the alias name that you want to remove:
+
+```sh
+unportalize aliasname
+```
+
+## How to uninstall
+
+Very simple too:
+
+```sh
+unportalize portalize
+unportalize unportalize
+```
