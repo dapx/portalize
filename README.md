@@ -17,7 +17,7 @@ We make it easy to you with portalize.
 Execute on your shell:
 
 ```sh
-curl https://raw.githubusercontent.com/dapx/portalize/master/install.sh | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/dapx/portalize/master/install.sh)"
 source ~/.$(basename $SHELL)rc
 ```
 
