@@ -62,10 +62,14 @@ unportalize aliasname
 
 ## How to uninstall
 
-Very simple too:
+Remove the portal alias file load command from your rc file:
 
 ```sh
-unportalize portals
-unportalize portalize
-unportalize unportalize
+printf "%s\n" "g/^\. ~\/\.portals$/d" w | ed -s ~/.$(basename $SHELL)rc
+```
+
+And if don't want to maintain your portals saved, you can simply remove the `~/.portals` file:
+
+```sh
+rm ~/.portals
 ```
