@@ -3,8 +3,8 @@ rc_filename=".$(basename $SHELL)rc"
 portals_filename=".portals"
 
 portals_alias="alias portals='sed \"/^alias portals/d; /^alias portalize/d; /^alias unportalize/d; s/alias //g; s/=/ /g\" ~/$portals_filename'"
-portalize_function_alias="alias portalize='make_portal() { echo alias \$1=\$PWD >> ~/$portals_filename; unset -f make_portal; . ~/$rc_filename }; make_portal'"
-unportalize_function_alias="alias unportalize='destroy_portal() { printf \"%s\\\\n\" \"g/alias \$1=/d\" w | ed -s ~/$portals_filename; unalias \$1; unset -f destroy_portal; . ~/$rc_filename }; destroy_portal'"
+portalize_function_alias="alias portalize='make_portal() { echo alias \$1=\$PWD >> ~/$portals_filename; unset -f make_portal; . ~/$portals_filename }; make_portal'"
+unportalize_function_alias="alias unportalize='destroy_portal() { printf \"%s\\\\n\" \"g/alias \$1=/d\" w | ed -s ~/$portals_filename; unalias \$1; unset -f destroy_portal; . ~/$portals_filename }; destroy_portal'"
 
 add_text_to_file_if_not_exists() {
   text=$1
