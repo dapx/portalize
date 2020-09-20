@@ -1,4 +1,4 @@
-# portalize
+# Portalize
 
 A simple shell alias to make portals 🧙
 
