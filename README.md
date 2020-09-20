@@ -18,7 +18,7 @@ Execute on your shell:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/dapx/portalize/master/install.sh)"
-source ~/.$(basename $SHELL)rc
+. ~/.$(basename $SHELL)rc # Load rc file
 ```
 
 ## How to create portals?
@@ -38,6 +38,12 @@ aliasname
 
 And you will be teleported to there.
 
+## How to list portals
+
+```sh
+portals
+```
+
 ## How to remove portals
 
 Call the unportalize alias from any place passing the alias name that you want to remove:
@@ -51,6 +57,7 @@ unportalize aliasname
 Very simple too:
 
 ```sh
+unportalize portals
 unportalize portalize
 unportalize unportalize
 ```
