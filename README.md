@@ -18,7 +18,7 @@ Execute on your shell:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/dapx/portalize/master/install.sh)"
-. ~/.$(basename $SHELL)rc # Load rc file
+. ~/.portals # Load portals after install, or you can simply start a new shell session.
 ```
 
 ## How to create portals?
